@@ -24,12 +24,11 @@ namespace VBF.MiniSharp
 
         public override bool IsAssignableFrom(TypeBase type)
         {
-            CodeClassType elementClassType = ElementType as CodeClassType;
             ArrayType arrayType = type as ArrayType;
 
-            if (elementClassType != null && arrayType != null)
+            if (ElementType != null && arrayType != null)
             {
-                return elementClassType.IsAssignableFrom(arrayType.ElementType);
+                return ElementType.IsAssignableFrom(arrayType.ElementType);
             }
 
             return false;
