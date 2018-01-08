@@ -423,7 +423,7 @@ namespace VBF.MiniSharp.CombinatorParser
                 from _int in K_INT
                 from _1 in LEFT_BK
                 from length in PExp
-                from _2 in RIGHT_BR
+                from _2 in RIGHT_BK
                 select (Expression)new NewArray(length, new SourceSpan(_1.Value.Span.EndLocation, _2.Value.Span.StartLocation));
 
             var foundationExp = // (exp) | number literal | true | false | this | id | new
